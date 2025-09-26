@@ -39,7 +39,7 @@ const testimonials = [
 function TestimonialCard({ name, role, content }) {
     return (
         <div className="bg-lime-400 rounded-xl p-6 shadow-lg text-black">
-            <p className="mb-4">"{content}"</p>
+            <p className="mb-4">{content}</p>
             <div className="font-bold">{name}</div>
             <div className="text-sm text-gray-700">{role}</div>
         </div>
