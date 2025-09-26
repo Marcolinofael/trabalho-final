@@ -35,15 +35,22 @@ const testimonials = [
     },
 ];
 
+// Tipos para as props
+type TestimonialCardProps = {
+  name: string;
+  role: string;
+  content: string;
+};
+
 // Componente para cada card de depoimento
-function TestimonialCard({ name, role, content }) {
-    return (
-        <div className="bg-lime-400 rounded-xl p-6 shadow-lg text-black">
-            <p className="mb-4">{content}</p>
-            <div className="font-bold">{name}</div>
-            <div className="text-sm text-gray-700">{role}</div>
-        </div>
-    );
+function TestimonialCard({ name, role, content }: TestimonialCardProps) {
+  return (
+    <div className="bg-lime-400 rounded-xl p-6 shadow-lg text-black">
+      <p className="mb-4">{content}</p>
+      <h4 className="font-semibold">{name}</h4>
+      <p className="text-sm">{role}</p>
+    </div>
+  );
 }
 
 export function Testimonial() {
